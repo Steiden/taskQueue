@@ -1,10 +1,10 @@
 <?php
 
-class taskQueueOfficeItemRemoveProcessor extends modObjectProcessor
+class slQueueRemoveProcessor extends modObjectProcessor
 {
-    public $objectType = 'taskQueueItem';
-    public $classKey = 'taskQueueItem';
-    public $languageTopics = ['taskqueue'];
+    public $objectType = 'slQueue';
+    public $classKey = 'slQueue';
+    public $languageTopics = ['shoplogistic'];
     //public $permission = 'remove';
 
 
@@ -19,13 +19,13 @@ class taskQueueOfficeItemRemoveProcessor extends modObjectProcessor
 
         $ids = $this->modx->fromJSON($this->getProperty('ids'));
         if (empty($ids)) {
-            return $this->failure($this->modx->lexicon('taskqueue_item_err_ns'));
+            return $this->failure($this->modx->lexicon('taskqueue_queue_err_ns'));
         }
 
         foreach ($ids as $id) {
-            /** @var taskQueueItem $object */
+            /** @var shopLogisticItem $object */
             if (!$object = $this->modx->getObject($this->classKey, $id)) {
-                return $this->failure($this->modx->lexicon('taskqueue_item_err_nf'));
+                return $this->failure($this->modx->lexicon('taskqueue_queue_err_nf'));
             }
 
             $object->remove();
@@ -36,4 +36,4 @@ class taskQueueOfficeItemRemoveProcessor extends modObjectProcessor
 
 }
 
-return 'taskQueueOfficeItemRemoveProcessor';
+return 'slQueueRemoveProcessor';

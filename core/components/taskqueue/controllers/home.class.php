@@ -61,6 +61,11 @@ class taskQueueHomeManagerController extends modExtraManagerController
         $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/widgets/home.panel.js');
         $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/sections/home.js');
 
+        $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/queue/grid.js');
+        $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/queue/panel.js');
+        $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/queue/queue.js');
+        $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/queue/windows.js');
+
         $this->addHtml('<script type="text/javascript">
         taskQueue.config = ' . json_encode($this->taskQueue->config) . ';
         taskQueue.config.connector_url = "' . $this->taskQueue->config['connectorUrl'] . '";

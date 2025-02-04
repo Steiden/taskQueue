@@ -2,16 +2,37 @@
 <model package="taskqueue" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="taskqueue"
        version="1.1">
 
-    <object class="taskQueueItem" table="taskqueue_items" extends="xPDOSimpleObject">
-        <field key="name" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
-        <field key="description" dbtype="text" phptype="string" null="true" default=""/>
-        <field key="active" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="1"/>
+    <!-- Объект очереди, все доступные action в классе queue.class.php -->
+    <object class="slQueue" table="sl_queue" extends="xPDOSimpleObject">
+        <field key="action" dbtype="varchar" precision="255" phptype="string" null="true" default=""/>
+        <field key="description" dbtype="varchar" precision="255" phptype="string" null="true" default=""/>
+        <field key="createdon" dbtype="datetime" phptype="datetime" null="true"/>
+        <field key="startedon" dbtype="datetime" phptype="datetime" null="true"/>
+        <field key="finishedon" dbtype="datetime" phptype="datetime" null="true"/>
+        <field key="createdby" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" />
+        <field key="processing" dbtype="tinyint" precision="1" phptype="boolean" null="false" default="0"/>
+        <field key="processed" dbtype="tinyint" precision="1" phptype="boolean" null="false" default="0"/>
+        <field key="fixed" dbtype="tinyint" precision="1" phptype="boolean" null="false" default="0"/>
+        <field key="response" dbtype="text" phptype="json" null="true"/>
+        <field key="properties" dbtype="text" phptype="json" null="true"/>
 
-        <index alias="name" name="name" primary="false" unique="false" type="BTREE">
-            <column key="name" length="" collation="A" null="false"/>
+        <index alias="action" name="action" primary="false" unique="false" type="BTREE">
+            <column key="action" length="" collation="A" null="false"/>
         </index>
-        <index alias="active" name="active" primary="false" unique="false" type="BTREE">
-            <column key="active" length="" collation="A" null="false"/>
+        <index alias="startedon" name="startedon" primary="false" unique="false" type="BTREE">
+            <column key="startedon" length="" collation="A" null="false"/>
+        </index>
+        <index alias="finishedon" name="finishedon" primary="false" unique="false" type="BTREE">
+            <column key="finishedon" length="" collation="A" null="false"/>
+        </index>
+        <index alias="createdon" name="createdon" primary="false" unique="false" type="BTREE">
+            <column key="createdon" length="" collation="A" null="false"/>
+        </index>
+        <index alias="processing" name="processing" primary="false" unique="false" type="BTREE">
+            <column key="processing" length="" collation="A" null="false"/>
+        </index>
+        <index alias="processed" name="processed" primary="false" unique="false" type="BTREE">
+            <column key="processed" length="" collation="A" null="false"/>
         </index>
     </object>
 

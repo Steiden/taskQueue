@@ -1,10 +1,10 @@
 <?php
 
-class taskQueueItemGetProcessor extends modObjectGetProcessor
+class slQueueGetProcessor extends modObjectGetProcessor
 {
-    public $objectType = 'taskQueueItem';
-    public $classKey = 'taskQueueItem';
-    public $languageTopics = ['taskqueue:default'];
+    public $objectType = 'slQueue';
+    public $classKey = 'slQueue';
+    public $languageTopics = ['shoplogistic:default'];
     //public $permission = 'view';
 
 
@@ -25,4 +25,4 @@ class taskQueueItemGetProcessor extends modObjectGetProcessor
 
 }
 
-return 'taskQueueItemGetProcessor';
+return 'slQueueGetProcessor';
