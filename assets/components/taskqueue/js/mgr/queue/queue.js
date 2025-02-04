@@ -1,16 +1,16 @@
-shopLogistic.page.Queue = function (config) {
+taskQueue.page.Queue = function (config) {
     config = config || {};
     Ext.apply(config, {
-        formpanel: 'shoplogistic-panel-queue',
+        formpanel: 'taskqueue-panel-queue',
         cls: 'container',
         buttons: this.getButtons(config),
         components: [{
-            xtype: 'shoplogistic-panel-queue'
+            xtype: 'taskqueue-panel-queue'
         }]
     });
-    shopLogistic.page.Queue.superclass.constructor.call(this, config);
+    taskQueue.page.Queue.superclass.constructor.call(this, config);
 };
-Ext.extend(shopLogistic.page.Queue, MODx.Component, {
+Ext.extend(taskQueue.page.Queue, MODx.Component, {
     getButtons: function (config) {
         var b = [];
 
@@ -19,7 +19,7 @@ Ext.extend(shopLogistic.page.Queue, MODx.Component, {
                 text: _('ms2_settings')
                 ,id: 'ms2-abtn-settings'
                 ,handler: function () {
-                    MODx.loadPage('?', 'a=mgr/settings&namespace=shoplogistic');
+                    MODx.loadPage('?', 'a=mgr/settings&namespace=taskqueue');
                 }
             });
         }*/
@@ -27,4 +27,4 @@ Ext.extend(shopLogistic.page.Queue, MODx.Component, {
         return b;
     }
 });
-Ext.reg('shoplogistic-page-queue', shopLogistic.page.Queue);
+Ext.reg('taskqueue-page-queue', taskQueue.page.Queue);

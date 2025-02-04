@@ -4,7 +4,7 @@ class slQueueGetProcessor extends modObjectGetProcessor
 {
     public $objectType = 'slQueue';
     public $classKey = 'slQueue';
-    public $languageTopics = ['shoplogistic:default'];
+    public $languageTopics = ['taskqueue:default'];
     //public $permission = 'view';
 
 

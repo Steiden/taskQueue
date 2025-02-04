@@ -4,7 +4,7 @@ class slQueueUpdateProcessor extends modObjectUpdateProcessor
 {
     public $objectType = 'slQueue';
     public $classKey = 'slQueue';
-    public $languageTopics = ['shoplogistic'];
+    public $languageTopics = ['taskqueue'];
     //public $permission = 'save';
 
 
@@ -41,7 +41,7 @@ class slQueueUpdateProcessor extends modObjectUpdateProcessor
     {
         $id = (int)$this->getProperty('id');
         if (empty($id)) {
-            return $this->modx->lexicon('shoplogistic_export_file_status_err_ns');
+            return $this->modx->lexicon('taskqueue_export_file_status_err_ns');
         }
 
         return parent::beforeSet();

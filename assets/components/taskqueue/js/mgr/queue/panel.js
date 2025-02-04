@@ -1,13 +1,13 @@
-shopLogistic.panel.Queue = function (config) {
+taskQueue.panel.Queue = function (config) {
     config = config || {};
 
     Ext.apply(config, {
         cls: 'container',
         items: [{
             xtype: 'modx-tabs',
-            id: 'shoplogistic-queue-tabs',
+            id: 'taskqueue-queue-tabs',
             stateful: true,
-            stateId: 'shoplogistic-queue-tabs',
+            stateId: 'taskqueue-queue-tabs',
             stateEvents: ['tabchange'],
             getState: function () {
                 return {
@@ -19,13 +19,13 @@ shopLogistic.panel.Queue = function (config) {
                 title: _('taskqueue_queue'),
                 layout: 'anchor',
                 items: [{
-                    xtype: 'shoplogistic-grid-queue',
-                    id: 'shoplogistic-grid-queue',
+                    xtype: 'taskqueue-grid-queue',
+                    id: 'taskqueue-grid-queue',
                 }]
             }]
         }]
     });
-    shopLogistic.panel.Queue.superclass.constructor.call(this, config);
+    taskQueue.panel.Queue.superclass.constructor.call(this, config);
 };
-Ext.extend(shopLogistic.panel.Queue, MODx.Panel);
-Ext.reg('shoplogistic-panel-queue', shopLogistic.panel.Queue);
+Ext.extend(taskQueue.panel.Queue, MODx.Panel);
+Ext.reg('taskqueue-panel-queue', taskQueue.panel.Queue);

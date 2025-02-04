@@ -1,4 +1,4 @@
-shopLogistic.window.CreateQueue = function (config) {
+taskQueue.window.CreateQueue = function (config) {
     config = config || {};
 
     Ext.applyIf(config, {
@@ -8,9 +8,9 @@ shopLogistic.window.CreateQueue = function (config) {
             action: 'mgr/queue/create'
         },
     });
-    shopLogistic.window.CreateQueue.superclass.constructor.call(this, config);
+    taskQueue.window.CreateQueue.superclass.constructor.call(this, config);
 };
-Ext.extend(shopLogistic.window.CreateQueue, shopLogistic.window.Default, {
+Ext.extend(taskQueue.window.CreateQueue, taskQueue.window.Default, {
 
     getFields: function (config) {
         return [{
@@ -56,14 +56,14 @@ Ext.extend(shopLogistic.window.CreateQueue, shopLogistic.window.Default, {
         }];
     }
 });
-Ext.reg('shoplogistic-window-queue-create', shopLogistic.window.CreateQueue);
+Ext.reg('taskqueue-window-queue-create', taskQueue.window.CreateQueue);
 
 
-shopLogistic.window.UpdateQueue = function (config) {
+taskQueue.window.UpdateQueue = function (config) {
     config = config || {};
 
     Ext.applyIf(config, {
-        title: _('shoplogistic_parser_config_update'),
+        title: _('taskqueue_parser_config_update'),
         width: 900,
         maxHeight: 400,
         baseParams: {
@@ -71,13 +71,13 @@ shopLogistic.window.UpdateQueue = function (config) {
         },
         bodyCssClass: 'tabs',
     });
-    shopLogistic.window.UpdateQueue.superclass.constructor.call(this, config);
+    taskQueue.window.UpdateQueue.superclass.constructor.call(this, config);
 };
-Ext.extend(shopLogistic.window.UpdateQueue, shopLogistic.window.CreateQueue, {
+Ext.extend(taskQueue.window.UpdateQueue, taskQueue.window.CreateQueue, {
 
     getFields: function (config) {
-        return shopLogistic.window.CreateQueue.prototype.getFields.call(this, config)
+        return taskQueue.window.CreateQueue.prototype.getFields.call(this, config)
     }
 
 });
-Ext.reg('shoplogistic-window-queue-update', shopLogistic.window.UpdateQueue);
+Ext.reg('taskqueue-window-queue-update', taskQueue.window.UpdateQueue);

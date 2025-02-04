@@ -4,7 +4,7 @@ class slQueueCreateProcessor extends modObjectCreateProcessor
 {
     public $objectType = 'slQueue';
     public $classKey = 'slQueue';
-    public $languageTopics = ['shoplogistic'];
+    public $languageTopics = ['taskqueue'];
     //public $permission = 'create';
 
 

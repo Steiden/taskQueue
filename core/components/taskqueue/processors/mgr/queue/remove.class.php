@@ -4,7 +4,7 @@ class slQueueRemoveProcessor extends modObjectProcessor
 {
     public $objectType = 'slQueue';
     public $classKey = 'slQueue';
-    public $languageTopics = ['shoplogistic'];
+    public $languageTopics = ['taskqueue'];
     //public $permission = 'remove';
 
 
@@ -23,7 +23,7 @@ class slQueueRemoveProcessor extends modObjectProcessor
         }
 
         foreach ($ids as $id) {
-            /** @var shopLogisticItem $object */
+            /** @var taskQueueItem $object */
             if (!$object = $this->modx->getObject($this->classKey, $id)) {
                 return $this->failure($this->modx->lexicon('taskqueue_queue_err_nf'));
             }

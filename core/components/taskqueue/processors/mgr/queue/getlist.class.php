@@ -59,8 +59,8 @@ class slQueueGetListProcessor extends modObjectGetListProcessor
         $array['actions'][] = [
             'cls' => '',
             'icon' => 'icon icon-edit',
-            'title' => $this->modx->lexicon('shoplogistic_menu_update'),
-            //'multiple' => $this->modx->lexicon('shoplogistic_items_update'),
+            'title' => $this->modx->lexicon('taskqueue_menu_update'),
+            //'multiple' => $this->modx->lexicon('taskqueue_items_update'),
             'action' => 'updateQueue',
             'button' => true,
             'menu' => true,
@@ -70,8 +70,8 @@ class slQueueGetListProcessor extends modObjectGetListProcessor
         $array['actions'][] = [
             'cls' => '',
             'icon' => 'icon icon-trash-o action-red',
-            'title' => $this->modx->lexicon('shoplogistic_menu_remove'),
-            'multiple' => $this->modx->lexicon('shoplogistic_menu_remove'),
+            'title' => $this->modx->lexicon('taskqueue_menu_remove'),
+            'multiple' => $this->modx->lexicon('taskqueue_menu_remove'),
             'action' => 'removeQueue',
             'button' => true,
             'menu' => true,

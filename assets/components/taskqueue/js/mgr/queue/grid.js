@@ -1,7 +1,7 @@
-shopLogistic.grid.Queue = function (config) {
+taskQueue.grid.Queue = function (config) {
     config = config || {};
     if (!config.id) {
-        config.id = 'shoplogistic-grid-queue';
+        config.id = 'taskqueue-grid-queue';
     }
 
     Ext.applyIf(config, {
@@ -12,9 +12,9 @@ shopLogistic.grid.Queue = function (config) {
         },
         stateful: true
     });
-    shopLogistic.grid.Queue.superclass.constructor.call(this, config);
+    taskQueue.grid.Queue.superclass.constructor.call(this, config);
 };
-Ext.extend(shopLogistic.grid.Queue, shopLogistic.grid.Default, {
+Ext.extend(taskQueue.grid.Queue, taskQueue.grid.Default, {
 
     getFields: function () {
         return ['id', 'action', 'slaction', 'fixed','description', 'createdon', 'startedon', 'finishedon', 'createdby', 'processing', 'processed', 'response', 'properties', 'actions'];
@@ -23,7 +23,7 @@ Ext.extend(shopLogistic.grid.Queue, shopLogistic.grid.Default, {
     getColumns: function () {
         return [
             {
-                header: _('shoplogistic_id'),
+                header: _('taskqueue_id'),
                 dataIndex: 'id',
                 width: 20
             },
@@ -33,7 +33,7 @@ Ext.extend(shopLogistic.grid.Queue, shopLogistic.grid.Default, {
                 dataIndex: 'slaction'
             },
             {
-                header: _('shoplogistic_createdon'),
+                header: _('taskqueue_createdon'),
                 dataIndex: 'createdon',
                 sortable: true,
                 width: 100,
@@ -43,28 +43,28 @@ Ext.extend(shopLogistic.grid.Queue, shopLogistic.grid.Default, {
                 dataIndex: 'processing',
                 sortable: true,
                 width: 100,
-                renderer: shopLogistic.utils.renderBoolean,
+                renderer: taskQueue.utils.renderBoolean,
             },
             {
                 header: _('taskqueue_queue_processed'),
                 dataIndex: 'processed',
                 sortable: true,
                 width: 100,
-                renderer: shopLogistic.utils.renderBoolean,
+                renderer: taskQueue.utils.renderBoolean,
             },
             {
                 header: _('taskqueue_queue_fixed'),
                 dataIndex: 'fixed',
                 sortable: true,
                 width: 100,
-                renderer: shopLogistic.utils.renderBoolean,
+                renderer: taskQueue.utils.renderBoolean,
             },
             {
                 header: _('ms2_actions'),
                 dataIndex: 'actions',
                 id: 'actions',
                 width: 50,
-                renderer: shopLogistic.utils.renderActions
+                renderer: taskQueue.utils.renderActions
             }
         ];
     },
@@ -87,14 +87,14 @@ Ext.extend(shopLogistic.grid.Queue, shopLogistic.grid.Default, {
     },
 
     createQueue: function (btn, e) {
-        var w = Ext.getCmp('shoplogistic-window-queue-create');
+        var w = Ext.getCmp('taskqueue-window-queue-create');
         if (w) {
             w.hide().getEl().remove();
         }
 
         w = MODx.load({
-            xtype: 'shoplogistic-window-queue-create',
-            id: 'shoplogistic-window-queue-create',
+            xtype: 'taskqueue-window-queue-create',
+            id: 'taskqueue-window-queue-create',
             record: this.menu.record,
             listeners: {
                 success: {
@@ -114,13 +114,13 @@ Ext.extend(shopLogistic.grid.Queue, shopLogistic.grid.Default, {
             this.menu.record = row.data;
         }
 
-        var w = Ext.getCmp('shoplogistic-window-queue-updater');
+        var w = Ext.getCmp('taskqueue-window-queue-updater');
         if (w) {
             w.close();
         }
         w = MODx.load({
-            xtype: 'shoplogistic-window-queue-update',
-            id: 'shoplogistic-window-queue-updater',
+            xtype: 'taskqueue-window-queue-update',
+            id: 'taskqueue-window-queue-updater',
             record: this.menu.record,
             title: this.menu.record['action'],
             listeners: {
@@ -164,4 +164,4 @@ Ext.extend(shopLogistic.grid.Queue, shopLogistic.grid.Default, {
         return true;
     },
 });
-Ext.reg('shoplogistic-grid-queue', shopLogistic.grid.Queue);
+Ext.reg('taskqueue-grid-queue', taskQueue.grid.Queue);
