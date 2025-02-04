@@ -1,0 +1,96 @@
+/* Grid */
+.taskqueue-taskqueue-row-disabled { font-style: italic; opacity: .6; color: #555; }
+.x-grid3-col-actions { padding: 3px 0 3px 5px; }
+
+/* Actions */
+.action-red { color: darkred !important; }
+.action-green { color: darkgreen !important; }
+.action-blue { color: cadetblue !important; }
+.action-yellow { color: goldenrod !important; }
+.action-gray { color: dimgray !important; }
+ul.taskqueue-row-actions { margin: 0; padding: 0; list-style: none; }
+ul.taskqueue-row-actions li { float: left; }
+ul.taskqueue-row-actions .taskqueue-btn { padding: 5px; margin-right: 2px; min-width: 26px; font-size: inherit; }
+
+/* Action menu */
+a.x-menu-item .x-menu-item-text, a.x-menu-item .x-menu-item-text .icon { cursor: pointer; }
+a.x-menu-item .x-menu-item-text .icon { line-height: 16px; top: auto; }
+.x-menu-list .icon { min-width: 1em; text-align: center; }
+.x-menu-list-item:hover .icon { color: inherit !important; }
+ul.taskqueue-row-actions .actions-menu { width: 40px; }
+ul.taskqueue-row-actions .actions-menu:after { content: " \f107"; }
+
+/* Search field */
+.x-field-search-clear,
+.x-field-search-go { border-left: 1px solid #e4e4e4 !important; }
+.x-field-search-clear:hover,
+.x-field-search-go:hover { border-left-color: transparent !important; }
+.x-field-search-clear:before { content: '\f00d' !important; }
+.x-field-search-go { right: 31px !important; border-radius: 0 !important; }
+.x-field-search-go:before { content: '\f002' !important; }
+
+/* Buttons */
+.taskqueue-btn { display: inline-block; margin-bottom: 0; font-weight: normal; text-align: center; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; background-image: none; border: 1px solid transparent; white-space: nowrap; padding: 6px 12px; font-size: 14px; line-height: 1.42857143; border-radius: 4px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none }
+.taskqueue-btn:focus, .taskqueue-btn:active:focus, .taskqueue-btn.active:focus, .taskqueue-btn.focus, .taskqueue-btn:active.focus, .taskqueue-btn.active.focus { outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px }
+.taskqueue-btn:hover, .taskqueue-btn:focus, .taskqueue-btn.focus { color: #333; text-decoration: none }
+.taskqueue-btn:active, .taskqueue-btn.active { outline: 0; background-image: none; -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) }
+.taskqueue-btn.disabled, .taskqueue-btn[disabled], fieldset[disabled] .taskqueue-btn { cursor: not-allowed; opacity: .65; filter: alpha(opacity=65); -webkit-box-shadow: none; box-shadow: none }
+a.taskqueue-btn.disabled, fieldset[disabled] a.taskqueue-btn { pointer-events: none }
+.taskqueue-btn-default { color: #333; background-color: #fff; border-color: #ccc }
+.taskqueue-btn-default:focus, .taskqueue-btn-default.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c }
+.taskqueue-btn-default:hover { color: #333; background-color: #e6e6e6; border-color: #adadad }
+.taskqueue-btn-default:active, .taskqueue-btn-default.active, .open > .dropdown-toggle.taskqueue-btn-default { color: #333; background-color: #e6e6e6; border-color: #adadad }
+.taskqueue-btn-default:active:hover, .taskqueue-btn-default.active:hover, .open > .dropdown-toggle.taskqueue-btn-default:hover, .taskqueue-btn-default:active:focus, .taskqueue-btn-default.active:focus, .open > .dropdown-toggle.taskqueue-btn-default:focus, .taskqueue-btn-default:active.focus, .taskqueue-btn-default.active.focus, .open > .dropdown-toggle.taskqueue-btn-default.focus { color: #333; background-color: #d4d4d4; border-color: #8c8c8c }
+.taskqueue-btn-default:active, .taskqueue-btn-default.active, .open > .dropdown-toggle.taskqueue-btn-default { background-image: none }
+.taskqueue-btn-default.disabled:hover, .taskqueue-btn-default[disabled]:hover, fieldset[disabled] .taskqueue-btn-default:hover, .taskqueue-btn-default.disabled:focus, .taskqueue-btn-default[disabled]:focus, fieldset[disabled] .taskqueue-btn-default:focus, .taskqueue-btn-default.disabled.focus, .taskqueue-btn-default[disabled].focus, fieldset[disabled] .taskqueue-btn-default.focus { background-color: #fff; border-color: #ccc }
+.taskqueue-btn-default .badge { color: #fff; background-color: #333 }
+.taskqueue-btn-primary { color: #fff; background-color: #337ab7; border-color: #2e6da4 }
+.taskqueue-btn-primary:focus, .taskqueue-btn-primary.focus { color: #fff; background-color: #286090; border-color: #122b40 }
+.taskqueue-btn-primary:hover { color: #fff; background-color: #286090; border-color: #204d74 }
+.taskqueue-btn-primary:active, .taskqueue-btn-primary.active, .open > .dropdown-toggle.taskqueue-btn-primary { color: #fff; background-color: #286090; border-color: #204d74 }
+.taskqueue-btn-primary:active:hover, .taskqueue-btn-primary.active:hover, .open > .dropdown-toggle.taskqueue-btn-primary:hover, .taskqueue-btn-primary:active:focus, .taskqueue-btn-primary.active:focus, .open > .dropdown-toggle.taskqueue-btn-primary:focus, .taskqueue-btn-primary:active.focus, .taskqueue-btn-primary.active.focus, .open > .dropdown-toggle.taskqueue-btn-primary.focus { color: #fff; background-color: #204d74; border-color: #122b40 }
+.taskqueue-btn-primary:active, .taskqueue-btn-primary.active, .open > .dropdown-toggle.taskqueue-btn-primary { background-image: none }
+.taskqueue-btn-primary.disabled:hover, .taskqueue-btn-primary[disabled]:hover, fieldset[disabled] .taskqueue-btn-primary:hover, .taskqueue-btn-primary.disabled:focus, .taskqueue-btn-primary[disabled]:focus, fieldset[disabled] .taskqueue-btn-primary:focus, .taskqueue-btn-primary.disabled.focus, .taskqueue-btn-primary[disabled].focus, fieldset[disabled] .taskqueue-btn-primary.focus { background-color: #337ab7; border-color: #2e6da4 }
+.taskqueue-btn-primary .badge { color: #337ab7; background-color: #fff }
+.taskqueue-btn-success { color: #fff; background-color: #5cb85c; border-color: #4cae4c }
+.taskqueue-btn-success:focus, .taskqueue-btn-success.focus { color: #fff; background-color: #449d44; border-color: #255625 }
+.taskqueue-btn-success:hover { color: #fff; background-color: #449d44; border-color: #398439 }
+.taskqueue-btn-success:active, .taskqueue-btn-success.active, .open > .dropdown-toggle.taskqueue-btn-success { color: #fff; background-color: #449d44; border-color: #398439 }
+.taskqueue-btn-success:active:hover, .taskqueue-btn-success.active:hover, .open > .dropdown-toggle.taskqueue-btn-success:hover, .taskqueue-btn-success:active:focus, .taskqueue-btn-success.active:focus, .open > .dropdown-toggle.taskqueue-btn-success:focus, .taskqueue-btn-success:active.focus, .taskqueue-btn-success.active.focus, .open > .dropdown-toggle.taskqueue-btn-success.focus { color: #fff; background-color: #398439; border-color: #255625 }
+.taskqueue-btn-success:active, .taskqueue-btn-success.active, .open > .dropdown-toggle.taskqueue-btn-success { background-image: none }
+.taskqueue-btn-success.disabled:hover, .taskqueue-btn-success[disabled]:hover, fieldset[disabled] .taskqueue-btn-success:hover, .taskqueue-btn-success.disabled:focus, .taskqueue-btn-success[disabled]:focus, fieldset[disabled] .taskqueue-btn-success:focus, .taskqueue-btn-success.disabled.focus, .taskqueue-btn-success[disabled].focus, fieldset[disabled] .taskqueue-btn-success.focus { background-color: #5cb85c; border-color: #4cae4c }
+.taskqueue-btn-success .badge { color: #5cb85c; background-color: #fff }
+.taskqueue-btn-info { color: #fff; background-color: #5bc0de; border-color: #46b8da }
+.taskqueue-btn-info:focus, .taskqueue-btn-info.focus { color: #fff; background-color: #31b0d5; border-color: #1b6d85 }
+.taskqueue-btn-info:hover { color: #fff; background-color: #31b0d5; border-color: #269abc }
+.taskqueue-btn-info:active, .taskqueue-btn-info.active, .open > .dropdown-toggle.taskqueue-btn-info { color: #fff; background-color: #31b0d5; border-color: #269abc }
+.taskqueue-btn-info:active:hover, .taskqueue-btn-info.active:hover, .open > .dropdown-toggle.taskqueue-btn-info:hover, .taskqueue-btn-info:active:focus, .taskqueue-btn-info.active:focus, .open > .dropdown-toggle.taskqueue-btn-info:focus, .taskqueue-btn-info:active.focus, .taskqueue-btn-info.active.focus, .open > .dropdown-toggle.taskqueue-btn-info.focus { color: #fff; background-color: #269abc; border-color: #1b6d85 }
+.taskqueue-btn-info:active, .taskqueue-btn-info.active, .open > .dropdown-toggle.taskqueue-btn-info { background-image: none }
+.taskqueue-btn-info.disabled:hover, .taskqueue-btn-info[disabled]:hover, fieldset[disabled] .taskqueue-btn-info:hover, .taskqueue-btn-info.disabled:focus, .taskqueue-btn-info[disabled]:focus, fieldset[disabled] .taskqueue-btn-info:focus, .taskqueue-btn-info.disabled.focus, .taskqueue-btn-info[disabled].focus, fieldset[disabled] .taskqueue-btn-info.focus { background-color: #5bc0de; border-color: #46b8da }
+.taskqueue-btn-info .badge { color: #5bc0de; background-color: #fff }
+.taskqueue-btn-warning { color: #fff; background-color: #f0ad4e; border-color: #eea236 }
+.taskqueue-btn-warning:focus, .taskqueue-btn-warning.focus { color: #fff; background-color: #ec971f; border-color: #985f0d }
+.taskqueue-btn-warning:hover { color: #fff; background-color: #ec971f; border-color: #d58512 }
+.taskqueue-btn-warning:active, .taskqueue-btn-warning.active, .open > .dropdown-toggle.taskqueue-btn-warning { color: #fff; background-color: #ec971f; border-color: #d58512 }
+.taskqueue-btn-warning:active:hover, .taskqueue-btn-warning.active:hover, .open > .dropdown-toggle.taskqueue-btn-warning:hover, .taskqueue-btn-warning:active:focus, .taskqueue-btn-warning.active:focus, .open > .dropdown-toggle.taskqueue-btn-warning:focus, .taskqueue-btn-warning:active.focus, .taskqueue-btn-warning.active.focus, .open > .dropdown-toggle.taskqueue-btn-warning.focus { color: #fff; background-color: #d58512; border-color: #985f0d }
+.taskqueue-btn-warning:active, .taskqueue-btn-warning.active, .open > .dropdown-toggle.taskqueue-btn-warning { background-image: none }
+.taskqueue-btn-warning.disabled:hover, .taskqueue-btn-warning[disabled]:hover, fieldset[disabled] .taskqueue-btn-warning:hover, .taskqueue-btn-warning.disabled:focus, .taskqueue-btn-warning[disabled]:focus, fieldset[disabled] .taskqueue-btn-warning:focus, .taskqueue-btn-warning.disabled.focus, .taskqueue-btn-warning[disabled].focus, fieldset[disabled] .taskqueue-btn-warning.focus { background-color: #f0ad4e; border-color: #eea236 }
+.taskqueue-btn-warning .badge { color: #f0ad4e; background-color: #fff }
+.taskqueue-btn-danger { color: #fff; background-color: #d9534f; border-color: #d43f3a }
+.taskqueue-btn-danger:focus, .taskqueue-btn-danger.focus { color: #fff; background-color: #c9302c; border-color: #761c19 }
+.taskqueue-btn-danger:hover { color: #fff; background-color: #c9302c; border-color: #ac2925 }
+.taskqueue-btn-danger:active, .taskqueue-btn-danger.active, .open > .dropdown-toggle.taskqueue-btn-danger { color: #fff; background-color: #c9302c; border-color: #ac2925 }
+.taskqueue-btn-danger:active:hover, .taskqueue-btn-danger.active:hover, .open > .dropdown-toggle.taskqueue-btn-danger:hover, .taskqueue-btn-danger:active:focus, .taskqueue-btn-danger.active:focus, .open > .dropdown-toggle.taskqueue-btn-danger:focus, .taskqueue-btn-danger:active.focus, .taskqueue-btn-danger.active.focus, .open > .dropdown-toggle.taskqueue-btn-danger.focus { color: #fff; background-color: #ac2925; border-color: #761c19 }
+.taskqueue-btn-danger:active, .taskqueue-btn-danger.active, .open > .dropdown-toggle.taskqueue-btn-danger { background-image: none }
+.taskqueue-btn-danger.disabled:hover, .taskqueue-btn-danger[disabled]:hover, fieldset[disabled] .taskqueue-btn-danger:hover, .taskqueue-btn-danger.disabled:focus, .taskqueue-btn-danger[disabled]:focus, fieldset[disabled] .taskqueue-btn-danger:focus, .taskqueue-btn-danger.disabled.focus, .taskqueue-btn-danger[disabled].focus, fieldset[disabled] .taskqueue-btn-danger.focus { background-color: #d9534f; border-color: #d43f3a }
+.taskqueue-btn-danger .badge { color: #d9534f; background-color: #fff }
+.taskqueue-btn-link { color: #337ab7; font-weight: normal; border-radius: 0 }
+.taskqueue-btn-link, .taskqueue-btn-link:active, .taskqueue-btn-link.active, .taskqueue-btn-link[disabled], fieldset[disabled] .taskqueue-btn-link { background-color: transparent; -webkit-box-shadow: none; box-shadow: none }
+.taskqueue-btn-link, .taskqueue-btn-link:hover, .taskqueue-btn-link:focus, .taskqueue-btn-link:active { border-color: transparent }
+.taskqueue-btn-link:hover, .taskqueue-btn-link:focus { color: #23527c; text-decoration: underline; background-color: transparent }
+.taskqueue-btn-link[disabled]:hover, fieldset[disabled] .taskqueue-btn-link:hover, .taskqueue-btn-link[disabled]:focus, fieldset[disabled] .taskqueue-btn-link:focus { color: #777; text-decoration: none }
+.taskqueue-btn-lg { padding: 10px 16px; font-size: 18px; line-height: 1.3333333; border-radius: 6px }
+.taskqueue-btn-sm { padding: 5px 10px; font-size: 12px; line-height: 1.5; border-radius: 3px }
+.taskqueue-btn-xs { padding: 1px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px }
+.taskqueue-btn-block { display: block; width: 100% }
+.taskqueue-btn-block + .taskqueue-btn-block { margin-top: 5px }
