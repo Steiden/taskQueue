@@ -22,28 +22,35 @@ $_lang['taskqueue_item_name'] = 'Название';
 $_lang['taskqueue_item_description'] = 'Описание';
 $_lang['taskqueue_item_active'] = 'Активно';
 
-$_lang['taskqueue_item_create'] = 'Создать предмет';
-$_lang['taskqueue_item_update'] = 'Изменить Предмет';
-$_lang['taskqueue_item_enable'] = 'Включить Предмет';
-$_lang['taskqueue_items_enable'] = 'Включить Предметы';
-$_lang['taskqueue_item_disable'] = 'Отключить Предмет';
-$_lang['taskqueue_items_disable'] = 'Отключить Предметы';
-$_lang['taskqueue_item_remove'] = 'Удалить Предмет';
-$_lang['taskqueue_items_remove'] = 'Удалить Предметы';
-$_lang['taskqueue_item_remove_confirm'] = 'Вы уверены, что хотите удалить этот Предмет?';
-$_lang['taskqueue_items_remove_confirm'] = 'Вы уверены, что хотите удалить эти Предметы?';
-$_lang['taskqueue_item_active'] = 'Включено';
+$_lang["taskqueue_statuses"] = "Статусы";
+$_lang["taskqueue_statuses_intro"] = "Здесь вы можете создавать новые статусы заказов. Не забудьте связать их со статусами miniShop2";
+$_lang["taskqueue_id"] = "ID";
+$_lang["taskqueue_name"] = "Наименование";
+$_lang["taskqueue_rank"] = "Сортировка";
+$_lang["taskqueue_active"] = "Активно";
+$_lang["taskqueue_color"] = "Цвет";
+$_lang["taskqueue_ms2status_id"] = "Статус miniShop2";
+$_lang["taskqueue_description"] = "Описание";
+$_lang["taskqueue_comment"] = "Комментарий";
+$_lang["taskqueue_col_actions"] = "Действия";
+$_lang["taskqueue_btn_create"] = "Создать";
+$_lang["taskqueue_status_stores_available"] = "Доступен для магазинов";
+$_lang["taskqueue_status_warehouses_available"] = "Доступен для складов";
+$_lang["taskqueue_status_final"] = "Финальный";
+$_lang["taskqueue_status_fixed"] = "Фиксированный";
+$_lang["taskqueue_btx24_id"] = "ID Bitrix24";
+$_lang["taskqueue_warehouse_sync"] = "Синхронизировать остатки со складом";
+$_lang["taskqueue_sync_all"] = "Синхронизировать остатки магазинов";
+$_lang["taskqueue_sync_all_confirm"] = "Вы уверены, что хотите синхронизировать остатки с магазинами? Синхронизируется только те магазины, у которых отмечена опция синхронизации";
 
-$_lang['taskqueue_item_err_name'] = 'Вы должны указать имя Предмета.';
-$_lang['taskqueue_item_err_ae'] = 'Предмет с таким именем уже существует.';
-$_lang['taskqueue_item_err_nf'] = 'Предмет не найден.';
-$_lang['taskqueue_item_err_ns'] = 'Предмет не указан.';
-$_lang['taskqueue_item_err_remove'] = 'Ошибка при удалении Предмета.';
-$_lang['taskqueue_item_err_save'] = 'Ошибка при сохранении Предмета.';
+$_lang["taskqueue_createdon"] = "Дата создания";
+$_lang["taskqueue_createdby"] = "Создатель";
+$_lang["taskqueue_updatedon"] = "Дата обновления";
+$_lang["taskqueue_updatedby"] = "Редактор";
+$_lang["taskqueue_properties"] = "Доп. свойства";
 
 $_lang['taskqueue_grid_search'] = 'Поиск';
 $_lang['taskqueue_grid_actions'] = 'Действия';
-
 
 $_lang["taskqueue_queue"] = "Очередь заданий";
 $_lang["taskqueue_queue_desc"] = "Управление очередями заданий.";
