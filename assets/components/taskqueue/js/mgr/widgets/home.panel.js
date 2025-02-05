@@ -1,33 +1,25 @@
 taskQueue.panel.Home = function (config) {
     config = config || {};
     Ext.apply(config, {
-        baseCls: 'modx-formpanel',
-        layout: 'anchor',
-        /*
-         stateful: true,
-         stateId: 'taskqueue-panel-home',
-         stateEvents: ['tabchange'],
-         getState:function() {return {activeTab:this.items.indexOf(this.getActiveTab())};},
-         */
-        hideMode: 'offsets',
+        cls: 'container',
         items: [{
-            html: '<h2>' + _('taskqueue') + '</h2>',
-            cls: '',
-            style: {margin: '15px 0'}
-        }, {
             xtype: 'modx-tabs',
-            defaults: {border: false, autoHeight: true},
-            border: true,
-            hideMode: 'offsets',
+            id: 'taskqueue-queue-tabs',
+            stateful: true,
+            stateId: 'taskqueue-queue-tabs',
+            stateEvents: ['tabchange'],
+            getState: function () {
+                return {
+                    activeTab: this.items.indexOf(this.getActiveTab())
+                };
+            },
+            deferredRender: false,
             items: [{
-                title: _('taskqueue_items'),
+                title: _('taskqueue_queue'),
                 layout: 'anchor',
                 items: [{
-                    html: _('taskqueue_intro_msg'),
-                    cls: 'panel-desc',
-                }, {
-                    xtype: 'taskqueue-grid-items',
-                    cls: 'main-wrapper',
+                    xtype: 'taskqueue-grid-queue',
+                    id: 'taskqueue-grid-queue',
                 }]
             }]
         }]

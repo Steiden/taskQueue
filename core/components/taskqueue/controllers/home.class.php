@@ -54,15 +54,16 @@ class taskQueueHomeManagerController extends modExtraManagerController
     {
         $this->addCss($this->taskQueue->config['cssUrl'] . 'mgr/main.css');
         $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/taskqueue.js');
+
         $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/misc/utils.js');
         $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/misc/combo.js');
-        $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/widgets/items.grid.js');
-        $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/widgets/items.windows.js');
+        $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/misc/default.grid.js');
+        $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/misc/default.window.js');
+
         $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/widgets/home.panel.js');
         $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/sections/home.js');
 
         $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/queue/grid.js');
-        $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/queue/panel.js');
         $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/queue/queue.js');
         $this->addJavascript($this->taskQueue->config['jsUrl'] . 'mgr/queue/windows.js');
 

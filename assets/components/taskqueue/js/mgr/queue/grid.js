@@ -17,7 +17,7 @@ taskQueue.grid.Queue = function (config) {
 Ext.extend(taskQueue.grid.Queue, taskQueue.grid.Default, {
 
     getFields: function () {
-        return ['id', 'action', 'slaction', 'fixed','description', 'createdon', 'startedon', 'finishedon', 'createdby', 'processing', 'processed', 'response', 'properties', 'actions'];
+        return ['id', 'action', 'slaction', 'fixed', 'description', 'createdon', 'startedon', 'finishedon', 'createdby', 'processing', 'processed', 'response', 'properties', 'actions'];
     },
 
     getColumns: function () {

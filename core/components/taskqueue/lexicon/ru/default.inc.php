@@ -5,6 +5,17 @@ $_lang['taskqueue'] = 'taskQueue';
 $_lang['taskqueue_menu_desc'] = 'Пример расширения для разработки.';
 $_lang['taskqueue_intro_msg'] = 'Вы можете выделять сразу несколько предметов при помощи Shift или Ctrl.';
 
+$_lang['taskqueue_update'] = 'Редактировать';
+$_lang['taskqueue_remove'] = 'Удалить';
+$_lang['taskqueue_enable'] = 'Включить';
+$_lang['taskqueue_disable'] = 'Выключить';
+$_lang['taskqueue_download'] = 'Скачать файл';
+$_lang['taskqueue_save'] = 'Сохранить';
+$_lang['taskqueue_cancel'] = 'Отмена';
+$_lang['taskqueue_add'] = 'Добавить';
+$_lang['taskqueue_confirm'] = 'Вы уверены?';
+$_lang['taskqueue_confirm_remove'] = 'В удалении объекта.';
+
 $_lang['taskqueue_items'] = 'Предметы';
 $_lang['taskqueue_item_id'] = 'Id';
 $_lang['taskqueue_item_name'] = 'Название';
