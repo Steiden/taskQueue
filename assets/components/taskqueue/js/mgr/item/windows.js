@@ -5,7 +5,7 @@ taskQueue.window.CreateQueue = function (config) {
         title: _('taskqueue_queue_create'),
         width: 900,
         baseParams: {
-            action: 'mgr/queue/create'
+            action: 'mgr/item/create'
         },
     });
     taskQueue.window.CreateQueue.superclass.constructor.call(this, config);
@@ -67,7 +67,7 @@ taskQueue.window.UpdateQueue = function (config) {
         width: 900,
         maxHeight: 400,
         baseParams: {
-            action: 'mgr/queue/update'
+            action: 'mgr/item/update'
         },
         bodyCssClass: 'tabs',
     });

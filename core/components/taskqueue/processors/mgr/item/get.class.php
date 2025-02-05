@@ -1,9 +1,9 @@
 <?php
 
-class slQueueGetProcessor extends modObjectGetProcessor
+class taskQueueItemGetProcessor extends modObjectGetProcessor
 {
-    public $objectType = 'slQueue';
-    public $classKey = 'slQueue';
+    public $objectType = 'taskQueueItem';
+    public $classKey = 'taskQueueItem';
     public $languageTopics = ['taskqueue:default'];
     //public $permission = 'view';
 
@@ -25,4 +25,4 @@ class slQueueGetProcessor extends modObjectGetProcessor
 
 }
 
-return 'slQueueGetProcessor';
+return 'taskQueueItemGetProcessor';

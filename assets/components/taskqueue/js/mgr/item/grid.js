@@ -6,7 +6,7 @@ taskQueue.grid.Queue = function (config) {
 
     Ext.applyIf(config, {
         baseParams: {
-            action: 'mgr/queue/getlist',
+            action: 'mgr/item/getlist',
             sort: 'id',
             dir: 'desc'
         },
@@ -150,7 +150,7 @@ Ext.extend(taskQueue.grid.Queue, taskQueue.grid.Default, {
                 : _('taskqueue_queue_remove_confirm'),
             url: this.config.url,
             params: {
-                action: 'mgr/queue/remove',
+                action: 'mgr/item/remove',
                 ids: Ext.util.JSON.encode(ids),
             },
             listeners: {

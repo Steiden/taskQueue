@@ -1,9 +1,9 @@
 <?php
 
-class slQueueRemoveProcessor extends modObjectProcessor
+class taskQueueItemRemoveProcessor extends modObjectProcessor
 {
-    public $objectType = 'slQueue';
-    public $classKey = 'slQueue';
+    public $objectType = 'taskQueueItem';
+    public $classKey = 'taskQueueItem';
     public $languageTopics = ['taskqueue'];
     //public $permission = 'remove';
 
@@ -36,4 +36,4 @@ class slQueueRemoveProcessor extends modObjectProcessor
 
 }
 
-return 'slQueueRemoveProcessor';
+return 'taskQueueItemRemoveProcessor';

@@ -1,9 +1,9 @@
 <?php
 
-class slQueueCreateProcessor extends modObjectCreateProcessor
+class taskQueueItemCreateProcessor extends modObjectCreateProcessor
 {
-    public $objectType = 'slQueue';
-    public $classKey = 'slQueue';
+    public $objectType = 'taskQueueItem';
+    public $classKey = 'taskQueueItem';
     public $languageTopics = ['taskqueue'];
     //public $permission = 'create';
 
@@ -37,4 +37,4 @@ class slQueueCreateProcessor extends modObjectCreateProcessor
 
 }
 
-return 'slQueueCreateProcessor';
+return 'taskQueueItemCreateProcessor';

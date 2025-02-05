@@ -1,9 +1,9 @@
 <?php
 
-class slQueueGetListProcessor extends modObjectGetListProcessor
+class taskQueueItemGetListProcessor extends modObjectGetListProcessor
 {
-    public $objectType = 'slQueue';
-    public $classKey = 'slQueue';
+    public $objectType = 'taskQueueItem';
+    public $classKey = 'taskQueueItem';
     public $defaultSortField = 'id';
     public $defaultSortDirection = 'DESC';
     //public $permission = 'list';
@@ -82,4 +82,4 @@ class slQueueGetListProcessor extends modObjectGetListProcessor
 
 }
 
-return 'slQueueGetListProcessor';
+return 'taskQueueItemGetListProcessor';

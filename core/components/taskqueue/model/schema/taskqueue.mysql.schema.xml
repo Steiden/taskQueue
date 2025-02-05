@@ -3,7 +3,7 @@
        version="1.1">
 
     <!-- Объект очереди, все доступные action в классе queue.class.php -->
-    <object class="slQueue" table="sl_queue" extends="xPDOSimpleObject">
+    <object class="taskQueueItem" table="task_queue_items" extends="xPDOSimpleObject">
         <field key="action" dbtype="varchar" precision="255" phptype="string" null="true" default=""/>
         <field key="description" dbtype="varchar" precision="255" phptype="string" null="true" default=""/>
         <field key="createdon" dbtype="datetime" phptype="datetime" null="true"/>

@@ -1,9 +1,9 @@
 <?php
 
-class slQueueUpdateProcessor extends modObjectUpdateProcessor
+class taskQueueItemUpdateProcessor extends modObjectUpdateProcessor
 {
-    public $objectType = 'slQueue';
-    public $classKey = 'slQueue';
+    public $objectType = 'taskQueueItem';
+    public $classKey = 'taskQueueItem';
     public $languageTopics = ['taskqueue'];
     //public $permission = 'save';
 
@@ -48,4 +48,4 @@ class slQueueUpdateProcessor extends modObjectUpdateProcessor
     }
 }
 
-return 'slQueueUpdateProcessor';
+return 'taskQueueItemUpdateProcessor';
