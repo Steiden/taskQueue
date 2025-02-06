@@ -49,6 +49,13 @@ $_lang["taskqueue_updatedon"] = "Дата обновления";
 $_lang["taskqueue_updatedby"] = "Редактор";
 $_lang["taskqueue_properties"] = "Доп. свойства";
 
+$_lang["shoplogistic_menu_update"] = "Редактировать";
+$_lang["shoplogistic_menu_enable"] = "Включить";
+$_lang["shoplogistic_menu_disable"] = "Отключить";
+$_lang["shoplogistic_menu_remove"] = "Удалить";
+$_lang["shoplogistic_menu_remove_multiple"] = "Удалить выбранное";
+$_lang["shoplogistic_all"] = "Все";
+
 $_lang['taskqueue_grid_search'] = 'Поиск';
 $_lang['taskqueue_grid_actions'] = 'Действия';
 
