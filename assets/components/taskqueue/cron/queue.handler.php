@@ -54,18 +54,7 @@ try {
 
 
         try {
-            $result = null;
-
-            switch ($action) {
-                case 'hooks/email':
-                case 'hooks/spam':
-                    $result = $modx->runSnippet('FormIt', $properties);
-                    break;
-                default:
-                    $modx->log(1, "Неизвестное действие: " . $action);
-                    $result = false;
-                    break;
-            }
+            $result = $modx->runSnippet('FormIt', $properties);
 
             // Результат вызова сниппета
             $modx->log(1, "Результат вызова сниппета: " . print_r($result, 1));

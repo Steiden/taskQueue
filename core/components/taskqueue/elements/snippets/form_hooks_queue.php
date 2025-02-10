@@ -36,14 +36,18 @@ $hooksArray = explode(',', $hooks);
 unset($hooksArray[array_search('FormHooksQueue', $hooksArray)]);
 
 // Хуки на очередь
+// toCRM,email,mailchimp
 $hooksQueue = [
-    'spam',
-    'email'
+    'toCRM',
+    'email',
+    'mailchimp'
 ];
+
 // Описания для хуков
 $hooksDescription = [
-    'spam' => 'Обработка спама',
+    'toCRM' => 'Отправка в CRM',
     'email' => 'Отправка email',
+    'mailchimp' => 'Отправка mailchimp'
 ];
 
 // Добавление хуков в очередь
