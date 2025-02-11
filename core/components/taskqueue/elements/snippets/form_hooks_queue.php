@@ -20,6 +20,7 @@ if (!isset($scriptProperties)) {
 $snippet = $scriptProperties['snippet'];
 $form = $scriptProperties['form'];
 $hooks = $scriptProperties['hooks'];
+$hooksQueue = $scriptProperties['hooksQueue'];
 $emailTpl = $scriptProperties['emailTpl'];
 $emailSubject = $scriptProperties['emailSubject'];
 $emailTo = $scriptProperties['emailTo'];
@@ -32,16 +33,16 @@ unset($properties['AjaxForm']);
 unset($properties['hooks']);
 unset($properties['validate']);
 
-$hooksArray = explode(',', $hooks);
-unset($hooksArray[array_search('FormHooksQueue', $hooksArray)]);
+$modx->log(1, "FormHooksQueue, properties: " . print_r($properties, 1));
 
 // Хуки на очередь
-// toCRM,email,mailchimp
-$hooksQueue = [
+$hooksToInclude = [
     'toCRM',
     'email',
     'mailchimp'
 ];
+$hooksArray = explode(',', $hooksQueue);
+$hooksCurrent = array_intersect($hooksArray, $hooksToInclude);
 
 // Описания для хуков
 $hooksDescription = [
@@ -51,8 +52,11 @@ $hooksDescription = [
 ];
 
 // Добавление хуков в очередь
-foreach ($hooksQueue as $hook) {
+foreach ($hooksCurrent as $hook) {
     $properties['hooks'] = $hook;
+    unset($hooksArray[array_search($hook, $hooksArray)]);
+
+    if(!isset($properties['fields'])) continue;
 
     $data = [
         'action' => 'hooks/' . $hook,
@@ -65,32 +69,30 @@ foreach ($hooksQueue as $hook) {
         'createdby' => $modx->user->get('id'),
     ];
 
-    if(!isset($properties['fields'])) continue;
-
     $queueItem = $modx->newObject('taskQueueItem', $data);
-
     if ($queueItem->save()) $modx->log(1, "Очередь на хук " . $hook . " добавлена!");
     else $modx->log(1, "Ошибка при добавлении очереди на хук " . $hook . ": " . $queueItem->getErrors());
 }
 
 
-// Преобразуем массив хуков в строку
-$formItHooksString = implode(',', $hooksArray);
-// Создаем массив параметров для FormIt
-$formItProperties = [
-    'form' => $form,
-    'hooks' => $formItHooksString,
-    'emailTpl' => $emailTpl,
-    'emailSubject' => $emailSubject,
-    'emailTo' => $emailTo,
-    'emailFrom' => $emailFrom,
-    'formName' => $formName,
-    'validate' => $validate
-];
-
-// Вызываем FormIt с переданными параметрами
-$output = $modx->runSnippet('FormIt', $formItProperties);
-
-// Возвращаем результат работы FormIt
-if ($output->success) return true;
-else return false;
+//// Преобразуем массив хуков в строку
+//$formItHooksString = implode(',', $hooksArray);
+//// Создаем массив параметров для FormIt
+//$formItProperties = [
+//    'form' => $form,
+//    'hooks' => $formItHooksString,
+//    'emailTpl' => $emailTpl,
+//    'emailSubject' => $emailSubject,
+//    'emailTo' => $emailTo,
+//    'emailFrom' => $emailFrom,
+//    'formName' => $formName,
+//    'validate' => $validate
+//];
+//
+//// Вызываем FormIt с переданными параметрами
+//$output = $modx->runSnippet('FormIt', $formItProperties);
+//
+//// Возвращаем результат работы FormIt
+//if ($output->success) return true;
+//else return false;
+return true;
